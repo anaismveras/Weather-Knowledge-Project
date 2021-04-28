@@ -1,0 +1,132 @@
+body {
+  background-image: url(https://images.pexels.com/photos/97558/pexels-photo-97558.jpeg?cs=srgb&dl=pexels-francesco-ungaro-97558.jpg&fm=jpg);
+  font-family: "Merriweather Sans", sans-serif;
+  color: #282846;
+}
+
+button {
+  margin: 20px 0 0 0;
+}
+
+hr {
+  border-top: 7px dotted;
+  width: 90%;
+  margin: 20px auto;
+  background: none;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  background-color: #282846;
+  color: #ffca2c;
+  padding: 30px 0 5px;
+  border-radius: 25px 25px 0 0;
+  margin: 0;
+}
+
+a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #ffca2c;
+}
+
+p {
+  padding: 30px 0 15px 0;
+  font-size: 15px;
+  color: #007580;
+}
+
+.container {
+  padding: 0;
+}
+
+.app-brand {
+  color: #ffca2c;
+  margin: 15px 0;
+}
+
+.search-bar {
+  text-align: center;
+  position: relative;
+  background-color: #282846;
+  border-radius: 0 0 25px 25px;
+  padding: 10px 0 30px;
+  margin: 0;
+}
+
+.weather-info {
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  text-align: center;
+  border-radius: 25px;
+  margin: 50px auto;
+  padding: 40px 45px;
+  box-shadow: 10px 5px 15px 5px #282846;
+}
+
+.current-city-weather {
+  font-size: 30px;
+  margin: 0 auto;
+  width: 720px;
+  height: 380px;
+}
+
+.current-emoji {
+  font-size: 200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.current-day {
+  display: inline;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#current-weather-div {
+  display: inline;
+  position: relative;
+  right: -250px;
+  bottom: 50px;
+  color: black;
+}
+
+.current-weather {
+  font-size: 75px;
+  position: relative;
+  display: inline;
+  right: 25px;
+}
+
+.date-time {
+  position: relative;
+  display: inline;
+  top: -480px;
+  right: 480px;
+}
+
+.future-weather {
+  margin: 0 auto;
+}
+
+.daysOfWeek {
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.weatherEmojis {
+  font-size: 60px;
+  margin: 0 auto;
+}
+
+.degreesOfWeek {
+  position: relative;
+  font-size: 30px;
+  margin: 0 auto 35px;
+}
+
+.temp-units {
+  position: relative;
+  display: inline;
+  right: 145px;
+}

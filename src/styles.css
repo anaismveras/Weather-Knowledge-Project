@@ -66,8 +66,7 @@ p {
 }
 
 .current-emoji {
-  font-size: 200px;
-  padding: 20px;
+  width: 300px;
   margin: 0 auto;
 }
 

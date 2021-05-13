@@ -52,122 +52,6 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-//Changeing C to F for furture temps//
-
-//MONDAY
-function convertMonTempToFahrenheit(event) {
-  event.preventDefault();
-  let monTempElement = document.querySelector("#mon-temp");
-  monTempElement.innerHTML = "42°";
-}
-
-function convertMonTempToCelsius(event) {
-  event.preventDefault();
-  let monTempElement = document.querySelector("#mon-temp");
-  monTempElement.innerHTML = "6°";
-}
-
-let monTempFahrenheitLink = document.querySelector("#mon-temp-fahrenheit");
-monTempFahrenheitLink.addEventListener("click", convertMonTempToFahrenheit);
-
-let monTempCelsiusLink = document.querySelector("#mon-temp-celsius");
-monTempCelsiusLink.addEventListener("click", convertMonTempToCelsius);
-
-//TUESDAY
-function convertTuesTempToFahrenheit(event) {
-  event.preventDefault();
-  let tuesTempElement = document.querySelector("#tues-temp");
-  tuesTempElement.innerHTML = "41°";
-}
-
-function convertTuesTempToCelsius(event) {
-  event.preventDefault();
-  let tuesTempElement = document.querySelector("#tues-temp");
-  tuesTempElement.innerHTML = "5°";
-}
-
-let tuesTempFahrenheitLink = document.querySelector("#tues-temp-fahrenheit");
-tuesTempFahrenheitLink.addEventListener("click", convertTuesTempToFahrenheit);
-
-let tuesTempCelsiusLink = document.querySelector("#tues-temp-celsius");
-tuesTempCelsiusLink.addEventListener("click", convertTuesTempToCelsius);
-
-//WEDNESDAY
-function convertWedTempToFahrenheit(event) {
-  event.preventDefault();
-  let wedTempElement = document.querySelector("#wed-temp");
-  wedTempElement.innerHTML = "50°";
-}
-
-function convertWedTempToCelsius(event) {
-  event.preventDefault();
-  let wedTempElement = document.querySelector("#wed-temp");
-  wedTempElement.innerHTML = "10°";
-}
-
-let wedTempFahrenheitLink = document.querySelector("#wed-temp-fahrenheit");
-wedTempFahrenheitLink.addEventListener("click", convertWedTempToFahrenheit);
-
-let wedTempCelsiusLink = document.querySelector("#wed-temp-celsius");
-wedTempCelsiusLink.addEventListener("click", convertWedTempToCelsius);
-
-//THURSDAY
-function convertThursTempToFahrenheit(event) {
-  event.preventDefault();
-  let thursTempElement = document.querySelector("#thurs-temp");
-  thursTempElement.innerHTML = "53°";
-}
-
-function convertThursTempToCelsius(event) {
-  event.preventDefault();
-  let thursTempElement = document.querySelector("#thurs-temp");
-  thursTempElement.innerHTML = "12°";
-}
-
-let thursTempFahrenheitLink = document.querySelector("#thurs-temp-fahrenheit");
-thursTempFahrenheitLink.addEventListener("click", convertThursTempToFahrenheit);
-
-let thursTempCelsiusLink = document.querySelector("#thurs-temp-celsius");
-thursTempCelsiusLink.addEventListener("click", convertThursTempToCelsius);
-
-//FRIDAY
-function convertFriTempToFahrenheit(event) {
-  event.preventDefault();
-  let friTempElement = document.querySelector("#fri-temp");
-  friTempElement.innerHTML = "45°";
-}
-
-function convertFriTempToCelsius(event) {
-  event.preventDefault();
-  let friTempElement = document.querySelector("#fri-temp");
-  friTempElement.innerHTML = "7°";
-}
-
-let friTempFahrenheitLink = document.querySelector("#fri-temp-fahrenheit");
-friTempFahrenheitLink.addEventListener("click", convertFriTempToFahrenheit);
-
-let friTempCelsiusLink = document.querySelector("#fri-temp-celsius");
-friTempCelsiusLink.addEventListener("click", convertFriTempToCelsius);
-
-//SATURDAY
-function convertSatTempToFahrenheit(event) {
-  event.preventDefault();
-  let satTempElement = document.querySelector("#sat-temp");
-  satTempElement.innerHTML = "65°";
-}
-
-function convertSatTempToCelsius(event) {
-  event.preventDefault();
-  let satTempElement = document.querySelector("#sat-temp");
-  satTempElement.innerHTML = "18°";
-}
-
-let satTempFahrenheitLink = document.querySelector("#sat-temp-fahrenheit");
-satTempFahrenheitLink.addEventListener("click", convertSatTempToFahrenheit);
-
-let satTempCelsiusLink = document.querySelector("#sat-temp-celsius");
-satTempCelsiusLink.addEventListener("click", convertSatTempToCelsius);
-
 //Search City & Geolocation
 
 function searchCity(event) {
@@ -183,6 +67,7 @@ let submitButton = document.querySelector("#search-bar-button");
 form.addEventListener("submit", searchCity);
 
 function showWeather(response) {
+  console.log(response.data);
   let h1 = document.querySelector("#city-info");
   h1.innerHTML = `${response.data.name}`;
   let currentTemp = document.querySelector("#currentTemp");
@@ -191,6 +76,13 @@ function showWeather(response) {
     "#current-city-weather-descrption"
   );
   weatherDescription.innerHTML = `${response.data.weather[0].main}`;
+
+  let iconElement = document.querySelector("#current-weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function findCity(city) {
@@ -210,3 +102,5 @@ function getPosition(position) {
 }
 
 navigator.geolocation.getCurrentPosition(getPosition);
+
+//Weather Icon

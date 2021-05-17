@@ -7,7 +7,13 @@ let currentTime = document.querySelector("h3.time");
 
 let date = now.getDate();
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let year = now.getFullYear();
 
 let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
@@ -43,7 +49,7 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = "14°";
+  temperatureElement.innerHTML = response.data.main.weather[0].temp;
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -87,14 +93,14 @@ function showWeather(response) {
 
 function findCity(city) {
   let apiKey = "69b40f8beeff9db6adde6eb2258de3ef";
-  let units = "imperial";
+  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
 }
 
 function getPosition(position) {
   let apiKey = "69b40f8beeff9db6adde6eb2258de3ef";
-  let units = "imperial";
+  let units = "metric";
   let currentLat = position.coords.latitude;
   let currentLong = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=${units}`;

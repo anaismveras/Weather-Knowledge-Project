@@ -99,12 +99,17 @@ navigator.geolocation.getCurrentPosition(getPosition);
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  //remove active class from link
+  celsiuslink.classList.remove("active");
+  fahrenheitlink.classList.add("active");
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(fahrenheitTemp);
 }
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
+  celsiuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(celsiusTemp);
 }

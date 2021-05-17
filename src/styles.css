@@ -124,6 +124,16 @@ p {
   right: 145px;
 }
 
+.current-weather-temp .active {
+  color: #282846;
+  cursor: default;
+  text-decoration: none;
+}
+
+.current-weather-temp .active:hover {
+  text-decoration: none;
+}
+
 .City-Link {
   font-size: 25px;
   text-decoration: none;

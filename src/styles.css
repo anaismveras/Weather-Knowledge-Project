@@ -21,7 +21,6 @@ p {
   color: #007580;
 }
 
-
 .container {
   padding: 0;
 }
@@ -107,17 +106,6 @@ p {
 }
 .weather-focrast-temp-min {
   opacity: 0.5;
-}
-
-.daysOfWeek {
-  font-size: 30px;
-  margin: 0 auto;
-}
-
-.degreesOfWeek {
-  position: relative;
-  font-size: 30px;
-  margin: 0 auto 35px;
 }
 
 .temp-units {

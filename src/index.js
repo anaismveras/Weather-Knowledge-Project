@@ -38,7 +38,35 @@ let month = months[now.getMonth()];
 currentDate.innerHTML = `${day} ${month} ${date}, ${year}`;
 currentTime.innerHTML = `${hours}:${minute}`;
 
-//Changing degrees from C to F for current temp
+function displayForcast() {
+  let forecastElement = document.querySelector("#forecast-weather");
+
+  let forecastHTML = `<div class="row daysOfWeek">`;
+  let days = ["Thurs", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+              <div class="weather-forcast-date">
+                ${day}
+              </div>
+              <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny day">
+            <div>
+              <span class="weather-forcast-temp-max">
+                18°
+              </span>
+              <span class="weather-focrast-temp-min">
+                 50°
+              </span>
+            </div>
+          </div>
+          `;
+  });
+
+  forsecastHTML = `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 //Search City & Geolocation
 
@@ -115,6 +143,8 @@ function displayCelsiusTemp(event) {
 }
 
 let celsiusTemp = null;
+
+displayForcast();
 
 let fahrenheitlink = document.querySelector("#fahrenheit-link");
 

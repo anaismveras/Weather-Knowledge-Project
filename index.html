@@ -62,7 +62,7 @@
         </form>
       </div>
 
-      <!--Weather Information-->
+      <!--Currrent Weather Information-->
       <div class="weather-info">
         <div class="row current-city-weather">
           <h1 id="city-info"></h1>
@@ -84,73 +84,36 @@
 
         <hr />
 
+        <!--Weather Focast-->
         <div class="future-weather">
           <div class="row daysOfWeek">
-            <div class="col">MON</div>
-            <div class="col">TUE</div>
-            <div class="col">WED</div>
-          </div>
-          <div class="row weatherEmojis">
-            <div class="col">☀️</div>
-            <div class="col">⛅</div>
-            <div class="col">🌧️</div>
-          </div>
-          <div class="row degreesOfWeek">
-            <div class="col" id="mon-temp">42°</div>
-            <div class="col-1 temp-units">
-              <a href="#" id="mon-temp-fahrenheit">°F</a>
-              <a href="#" id="mon-temp-celsius">°C</a>
-            </div>
-            <div class="col" id="tues-temp">41°</div>
-            <div class="col-1 temp-units">
-              <a href="#" id="tues-temp-fahrenheit">°F</a>
-              <a href="#" id="tues-temp-celsius">°C</a>
-            </div>
-            <div class="col" id="wed-temp">50°</div>
-            <div class="col-1 temp-units">
-              <a href="#" id="wed-temp-fahrenheit">°F</a>
-              <a href="#" id="wed-temp-celsius">°C</a>
-            </div>
-          </div>
-          <div class="row daysOfWeek">
-            <div class="col">THUR</div>
-            <div class="col">FRI</div>
-            <div class="col">SAT</div>
-          </div>
-          <div class="row weatherEmojis">
-            <div class="col">⛅</div>
-            <div class="col">🌧️</div>
-            <div class="col">☀️</div>
-          </div>
-          <div class="row degreesOfWeek">
-            <div class="col" id="thurs-temp">53°</div>
-            <div class="col-1 temp-units">
-              <a href="#" id="thurs-temp-fahrenheit">°F</a>
-              <a href="#" id="thurs-temp-celsius">°C</a>
-            </div>
-            <div class="col sat-weather" id="fri-temp">45°</div>
-            <div class="col-1 temp-units">
-              <a href="#" id="fri-temp-fahrenheit">°F</a>
-              <a href="#" id="fri-temp-celsius">°C</a>
-            </div>
-            <div class="col" id="sat-temp">65°</div>
-            <div class="col-1 temp-units">
-              <a href="#" id="sat-temp-fahrenheit">°F</a>
-              <a href="#" id="sat-temp-celsius">°C</a>
+            <div class="col-2">
+              <div class="weather-forcast-date">
+                MON
+              </div>
+              <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny day">
+              <br>
+              <div>
+              <span class="weather-forcast-temp-max">
+                18°
+              </span>
+              <span class="weather-focrast-temp-min">
+                 50°
+              </span>
             </div>
           </div>
         </div>
+
+           <!--Footer Information-->
+        <small>
+          <a href="https://github.com/anaismveras/Weather-Knowledge-Project" target="_blank">
+            Open Source Code, By Anais Veras
+          </a>
+        </small>
+        </div>
       </div>
 
-      <!--Footer Information-->
-      <footer>
-        <a class="City-Link" href="https://en.wikipedia.org/wiki/New_York_City" target="_blank">
-          Read About The City Your Search
-        </a>
-        <p>Coded By Anais Veras</p>
-        <a class="GitHub-Link" href="https://github.com/anaismveras/Weather-Knowledge-Project">GitHub</a>
-      </footer>
-    </div>
+      
     <script src="src/index.js"></script>
   </body>
 </html>

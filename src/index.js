@@ -103,12 +103,14 @@ function getForecast(coordinates) {
 }
 
 function showWeather(response) {
+  console.log(response.data);
+
+  celsiusTemp = response.data.main.temp;
+
   let h1 = document.querySelector("#city-info");
   h1.innerHTML = `${response.data.name}`;
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(celsiusTemp);
-
-  celsiusTemp = response.data.main.temp;
 
   let weatherDescription = document.querySelector(
     "#current-city-weather-descrption"
